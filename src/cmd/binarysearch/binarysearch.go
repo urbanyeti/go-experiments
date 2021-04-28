@@ -5,8 +5,8 @@ import (
 )
 
 func main() {
-	items := []int{1, 2, 9, 20, 31, 45, 62, 70, 100}
-	fmt.Println(binarySearch2(62, items))
+	items := []int{1, 2, 9, 20, 31, 45, 62, 70, 100, 120}
+	fmt.Println(binarySearch2(100, items))
 }
 
 func binarySearch(needle int, haystack []int) bool {
@@ -37,13 +37,7 @@ func binarySearch(needle int, haystack []int) bool {
 }
 
 func binarySearch2(n int, arr []int) bool {
-	if len(arr) <= 1 {
-		if len(arr) == 0 {
-			return false
-		}
-		if arr[0] == n {
-			return true
-		}
+	if len(arr) == 0 {
 		return false
 	}
 
